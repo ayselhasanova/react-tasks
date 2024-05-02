@@ -11,25 +11,22 @@ const CustomButton = ({ text, warnMessage, hint }) => {
   };
 
   const handleClick = () => {
-    setClicked(true);
-    if (warnMessage) {
-      const warningSection = document.createElement('div');
-      warningSection.innerText = warnMessage;
-      warningSection.classList.add('warning')
-      document.body.appendChild(warningSection);
-    }
+    setClicked(!clicked);
   };
 
   return (
+    <>
     <button
       className={`custom-button ${clicked ? 'clicked' : ''}`}
       onMouseOver={toggleHint}
       onMouseOut={toggleHint}
       onClick={handleClick}
-    >
+      >
       {text}
       {showHint && <span className="hint">{hint}</span>}
     </button>
+      {clicked && <div className="warning">{warnMessage}</div>}
+      </>
   );
 };
 
