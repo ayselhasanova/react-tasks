@@ -1,0 +1,39 @@
+body {
+  padding: 50px;
+}
+
+.custom-button {
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.hint {
+  position: absolute;
+  top: 0px;
+  left: 150px;
+  border: 1px solid #000;
+  color: #000;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+  display: none;
+}
+
+.custom-button:hover .hint {
+  display: block;
+}
+
+.clicked {
+  background-color: red;
+}
+
+.warning{
+  text-align: center;
+  padding: 100px;
+  font-size: 32px;
+  font-weight: 500;
+  border: 1px solid #000;
+  margin-top: 70px;
+  color: red;
+}
